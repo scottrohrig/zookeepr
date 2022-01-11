@@ -30,13 +30,13 @@ function filterByQuery( query, animals ) {
     }
 
     if ( query.diet ) {
-        filtered = filtered.filter( animal => animal.diet = query.diet );
+        filtered = filtered.filter( animal => animal.diet === query.diet );
     }
     if ( query.species ) {
-        filtered = filtered.filter( animal => animal.species = query.species );
+        filtered = filtered.filter( animal => animal.species === query.species );
     }
     if ( query.name ) {
-        filtered = filtered.filter( animal => animal.name = query.name );
+        filtered = filtered.filter( animal => animal.name === query.name );
     }
 
     return filtered;
